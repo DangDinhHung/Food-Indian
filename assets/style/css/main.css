@@ -1,0 +1,579 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none !important;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-family: "Montserrat", sans-serif;
+}
+
+.section-content {
+  padding: 0 10px;
+  max-width: 1000px;
+  margin: 100px auto 50px;
+  text-align: center;
+}
+.section-content .top-title {
+  font-size: 30px;
+  text-transform: uppercase;
+  font-weight: 700;
+  padding-bottom: 5px;
+}
+.section-content .section-title {
+  font-family: "Fredericka the Great", cursive;
+  font-size: 50px;
+  padding-bottom: 15px;
+  text-transform: uppercase;
+}
+.section-content .section-desc {
+  font-size: 15px;
+}
+
+header {
+  background-color: #ffe001;
+}
+header .topbar {
+  display: flex;
+  justify-content: space-between;
+  padding: 50px 50px 30px;
+}
+header .topbar .logo {
+  font-family: "Fredericka the Great", cursive;
+  font-size: 50px;
+  font-weight: 800;
+  text-transform: uppercase;
+  color: #151515;
+}
+header .contact {
+  display: flex;
+}
+header .contact .text {
+  text-align: right;
+  font-size: 15px;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+header .contact .text .phone {
+  font-size: 30px;
+}
+header .contact .icon {
+  font-size: 40px;
+  margin-left: 8px;
+}
+header .menu {
+  display: flex;
+  justify-content: flex-end;
+  padding-right: 50px;
+}
+header .menu li:not(:first-child) {
+  margin-left: 50px;
+}
+header .menu li:hover a::before {
+  width: 80%;
+}
+header .menu a {
+  display: inline-block;
+  text-transform: uppercase;
+  font-size: 15px;
+  color: #151515;
+  font-weight: 600;
+  padding: 10px;
+  position: relative;
+}
+header .menu a::before {
+  content: "";
+  width: 0;
+  height: 2px;
+  background-color: #151515;
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  transition: all 0.25s ease;
+}
+header .hero {
+  padding: 50px 150px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+header .hero .hero-title {
+  text-transform: uppercase;
+  text-align: center;
+}
+header .hero .hero-title .tt1 {
+  font-size: 35px;
+  font-weight: 700;
+  font-family: "Lemonada", cursive;
+}
+header .hero .hero-title .tt2 {
+  padding: 20px 0;
+  font-size: 70px;
+  font-family: "Fredericka the Great", cursive;
+}
+header .hero .hero-title .tt3 {
+  font-size: 20px;
+  font-weight: 700;
+  display: inline-block;
+  border-bottom: 1px solid #454235;
+  padding-bottom: 50px;
+  margin-bottom: 50px;
+}
+header .hero .hero-title .hero-content .text {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Fredericka the Great", cursive;
+}
+header .hero .hero-title .hero-content .text p {
+  font-size: 20px;
+}
+header .hero .hero-title .hero-content .hero-btn {
+  display: inline-block;
+  color: #151515;
+  font-size: 15px;
+  font-weight: 700;
+  margin-top: 20px;
+  padding: 10px 25px;
+  border: 1.5px solid #454235;
+  transition: all 0.25s ease;
+}
+header .hero .hero-title .hero-content .hero-btn:hover {
+  background-color: #e0dea4;
+}
+header .hero .hero-imgs {
+  width: 500px;
+  height: 500px;
+  border-radius: 50%;
+  overflow: hidden;
+  box-shadow: 0 0 10px 1px;
+}
+header .hero .hero-imgs img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+@media screen and (max-width: 1024px) {
+  .hero {
+    flex-direction: column;
+  }
+  .hero-btn {
+    margin-bottom: 50px;
+  }
+  .tt3 {
+    margin-bottom: 20px !important;
+    padding-bottom: 20px !important;
+  }
+}
+@media screen and (max-width: 768px) {
+  .menu {
+    justify-content: center !important;
+    padding-right: 0 !important;
+  }
+}
+@media screen and (min-width: 319px) and (max-width: 415px) {
+  .topbar {
+    padding: 20px !important;
+  }
+  .logo {
+    font-size: 20px !important;
+  }
+  .text {
+    font-size: 12px !important;
+  }
+  .phone {
+    font-size: 15px !important;
+  }
+  .icon {
+    font-size: 25px !important;
+  }
+  .menu {
+    flex-wrap: wrap;
+    background-color: #e0dea4;
+  }
+  .menu li {
+    padding: 10px 0;
+    justify-content: center !important;
+  }
+  .menu li a {
+    font-size: 13px;
+  }
+  .menu li:not(:first-child) {
+    margin-left: 0 !important;
+  }
+  .tt1 {
+    font-size: 18px !important;
+  }
+  .tt2 {
+    font-size: 50px !important;
+  }
+  .tt3 {
+    font-size: 14px !important;
+  }
+  .hero {
+    padding: 20px 50px !important;
+  }
+  .hero-btn {
+    margin-bottom: 30px;
+  }
+  .hero-imgs {
+    width: 200px !important;
+    height: 200px !important;
+  }
+}
+.enjoy-list {
+  display: flex;
+  justify-content: space-around;
+  position: relative;
+}
+.enjoy-list .bglay {
+  background-color: #e0dea4;
+  width: 100%;
+  height: 100px;
+  position: absolute;
+  top: 20%;
+  left: 0;
+  right: 0;
+  z-index: -9999;
+}
+.enjoy-list .enjoy-item {
+  display: inline-block;
+}
+.enjoy-list .enjoy-item .item-img {
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  overflow: hidden;
+  box-shadow: 14px 21px 84px -20px;
+}
+.enjoy-list .enjoy-item .item-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+.enjoy-list .enjoy-item .item-content {
+  width: 300px;
+  text-align: center;
+  margin-top: 50px;
+}
+.enjoy-list .enjoy-item .item-content .item-title {
+  font-size: 18px;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+.enjoy-list .enjoy-item .item-content .item-desc {
+  font-size: 20px;
+  padding: 12px 0;
+  margin-bottom: 10px;
+}
+.enjoy-list .enjoy-item .item-content .item-btn {
+  display: inline-block;
+  text-transform: uppercase;
+  color: #151515;
+  font-size: 15px;
+  font-weight: 700;
+  padding: 13px 25px;
+  background-color: #ffe001;
+  transition: all 0.25s ease;
+}
+.enjoy-list .enjoy-item .item-content .item-btn:hover {
+  background-color: #e0dea4;
+}
+
+@media screen and (max-width: 1024px) {
+  .item-img {
+    width: 200px !important;
+    height: 200px !important;
+  }
+  .item-content {
+    width: 200px !important;
+  }
+  .bglay {
+    height: 80px !important;
+    top: 15% !important;
+  }
+}
+@media screen and (min-width: 320px) and (max-width: 415px) {
+  .enjoy-list {
+    flex-direction: column;
+    align-items: center;
+  }
+  .bglay {
+    display: none;
+  }
+  .enjoy-item {
+    margin-bottom: 50px;
+  }
+  .item-content {
+    margin-top: 25px !important;
+  }
+}
+.slider-img {
+  position: relative;
+}
+.slider-img .img-bg {
+  display: flex;
+  justify-content: space-between;
+}
+.slider-img .img-bg img {
+  width: 500px;
+  height: 300px;
+}
+.slider-img .img-main {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.slider-img .img-main img {
+  width: 600px;
+}
+
+.slider-btn {
+  margin-top: 50px;
+  text-align: center;
+}
+.slider-btn .btn-item {
+  outline: none;
+  border: none;
+  width: 10px;
+  height: 10px;
+  border-radius: 100%;
+}
+.slider-btn .btn-item:first-child {
+  background-color: #ffe001;
+}
+
+#carouselExampleIndicators {
+  width: 100%;
+  height: 500px;
+  display: none;
+}
+
+.carousel-inner {
+  width: 100%;
+  height: 100%;
+}
+.carousel-inner .carousel-item {
+  width: 100%;
+  height: 100%;
+}
+.carousel-inner .carousel-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.carousel-indicators [data-bs-target] {
+  border-radius: 100%;
+  width: 10px !important;
+  height: 10px !important;
+}
+
+.carousel-indicators .active {
+  background-color: #ffe001 !important;
+}
+
+@media screen and (min-width: 320px) and (max-width: 415px) {
+  .slider-img, .slider-btn {
+    display: none;
+  }
+  #carouselExampleIndicators {
+    display: block;
+  }
+  .food-template {
+    flex-direction: column !important;
+  }
+  .tempalate-r img {
+    width: 300px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .food-template {
+    flex-direction: column;
+  }
+  .tempalate-r {
+    text-align: center;
+    margin-bottom: 10px;
+  }
+  .tempalte-l img {
+    margin-bottom: 10px;
+  }
+}
+.food-template {
+  display: flex;
+  justify-content: center;
+  padding: 0 20px;
+  margin-top: 50px;
+}
+.food-template .tempalate-r {
+  padding-right: 20px;
+}
+.food-template .tempalte-l {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.info-table {
+  max-width: 800px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-around;
+}
+.info-table input {
+  display: block;
+  padding: 10px 20px;
+  width: 300px;
+  margin-bottom: 15px;
+  outline: none;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+}
+.info-table .info-l input:last-child {
+  background-color: #ffe001;
+  text-transform: uppercase;
+  font-weight: 700;
+  border: none;
+  transition: all 0.25s ease;
+}
+.info-table .info-l input:last-child:hover {
+  opacity: 0.8;
+}
+
+@media screen and (min-width: 320px) and (max-width: 415px) {
+  .info-table {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+footer {
+  width: 100%;
+  margin-top: 50px;
+  position: relative;
+  color: #fff;
+}
+footer img {
+  width: 100%;
+}
+footer .footer-content {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  padding: 0 150px;
+}
+footer .footer-content .logo {
+  font-family: "Fredericka the Great", cursive;
+  font-size: 50px;
+  font-weight: 800;
+  text-transform: uppercase;
+  color: #ffe001;
+}
+footer .footer-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+footer .footer-top .top-r .top-r-text {
+  width: 50%;
+  font-size: 20px;
+  line-height: 1.8;
+}
+footer .footer-top .top-l {
+  padding-right: 20px;
+}
+footer .footer-top .top-l .icons {
+  display: flex;
+}
+footer .footer-top .top-l .icons i {
+  font-size: 25px;
+  padding-right: 15px;
+  color: #ffe001;
+  padding-top: 2px;
+}
+footer .coppyright {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 100px;
+}
+footer .coppyright .coppyright-text {
+  font-size: 20px;
+}
+footer .coppyright .socials i {
+  padding: 10px 10px;
+  margin: 0 5px;
+  font-size: 30px;
+  background-color: #fff;
+  color: #151515;
+  border-radius: 100%;
+}
+
+@media screen and (max-width: 1024px) {
+  .top-r-text {
+    width: 90% !important;
+    font-size: 15px !important;
+  }
+}
+@media screen and (max-width: 768px) {
+  .footer-content {
+    padding: 0 30px !important;
+  }
+}
+
+/*# sourceMappingURL=main.css.map */

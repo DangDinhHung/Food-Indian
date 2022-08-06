@@ -1,0 +1,33 @@
+$primary-color:#ffe001;
+$secondary-color: #e0dea4;
+$third-color: #151515;
+$four-color: #454235;
+
+$font-one: 'Montserrat', sans-serif;
+$font-two: 'Fredericka the Great', cursive;
+$font-three: 'Lemonada', cursive;
+
+html {
+  font-family: $font-one;
+}
+.section-content{
+  padding: 0 10px;
+  max-width: 1000px;
+  margin: 100px auto 50px;
+  text-align: center;
+  .top-title{
+    font-size: 30px;
+    text-transform: uppercase;
+    font-weight: 700;
+    padding-bottom: 5px;
+  }
+  .section-title{
+    font-family: $font-two;
+    font-size: 50px;
+    padding-bottom: 15px;
+    text-transform: uppercase;
+  }
+  .section-desc{
+    font-size: 15px;
+  }
+}

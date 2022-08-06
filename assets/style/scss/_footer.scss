@@ -1,0 +1,80 @@
+footer {
+  width: 100%;
+  margin-top: 50px;
+  position: relative;
+  color: #fff;
+
+  img {
+    width: 100%;
+  }
+
+  .footer-content {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    padding: 0 150px;
+    .logo {
+      font-family: "Fredericka the Great", cursive;
+      font-size: 50px;
+      font-weight: 800;
+      text-transform: uppercase;
+      color: $primary-color;
+    }
+  }
+
+  .footer-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    .top-r {
+      .top-r-text {
+        width: 50%;
+        font-size: 20px;
+        line-height: 1.8;
+      }
+    }
+
+    .top-l {
+      padding-right: 20px;
+      .icons {
+        display: flex;
+
+        i {
+          font-size: 25px;
+          padding-right: 15px;
+          color: $primary-color;
+          padding-top: 2px;
+        }
+      }
+    }
+  }
+  .coppyright{
+    display: flex;
+    justify-content: space-between;
+    padding-top: 100px;
+    .coppyright-text{
+      font-size: 20px;
+    }
+    .socials{
+      i {
+        padding: 10px 10px;
+        margin: 0 5px;
+        font-size: 30px;
+        background-color: #fff;
+        color: $third-color;
+        border-radius: 100%;
+      }
+    }
+  }
+}
+@media screen and (max-width: 1024px) {
+  .top-r-text {
+    width: 90% !important;
+    font-size: 15px !important;
+  }
+}
+@media screen and (max-width: 768px) {
+  .footer-content {
+    padding: 0 30px !important;
+  }
+}
